@@ -2,6 +2,7 @@ var c = document.getElementById("newcanvas");
 var ctx = c.getContext("2d");
 
 var img = document.getElementById("dvdlogo");
+var frameid;
 
 var animation = function(){
 
@@ -26,11 +27,17 @@ var animation = function(){
 	currentX += deltaX;
 	currentY += deltaY;
 
-	window.requestAnimationFrame(bounce);
+	frameid = window.requestAnimationFrame(bounce);
     };
 
     bounce();
 };
 
+var stopBounce = function(){
+    window.cancelAnimationFrame(frameid);
+};
+
 var button = document.getElementById("start");
 button.addEventListener("click",animation);
+var sbutton = document.getElementById("stop");
+sbutton.addEventListener("click",stopBounce);
