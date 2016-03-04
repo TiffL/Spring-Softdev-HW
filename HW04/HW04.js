@@ -14,6 +14,10 @@ var clear = function(){
     }
 };
 
+var stop = function(){
+    clearInterval(id);
+};
+
 var circleAnimation = function(){
 
     var radius = 0;
@@ -92,3 +96,6 @@ s2button.addEventListener("click",dvdAnimation);
 
 var cbutton = document.getElementById("clear");
 cbutton.addEventListener("click",clear);
+
+var stopbutton = document.getElementById("stop");
+stopbutton.addEventListener("click",stop);
