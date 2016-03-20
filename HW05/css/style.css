@@ -1,0 +1,19 @@
+body{
+     background-color:#FFFF99;
+} 
+
+.container{
+    width: 1220px;
+    margin-left: 55px;
+    padding: 5px;
+    border: 1px solid black;
+    background: white; 
+}
+
+.barChart div{
+  font-size: 10px;
+  text-align: right;
+  padding: 4px;
+  margin: 2px;
+  color: white;
+}
