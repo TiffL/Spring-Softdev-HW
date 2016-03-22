@@ -1,5 +1,6 @@
 body{
      background-color:#FFFF99;
+     font-size: 20px;
 } 
 
 .container{
@@ -16,4 +17,13 @@ body{
   padding: 4px;
   margin: 2px;
   color: white;
+}
+
+.button {
+    background-color: blue;
+    border-radius: 6px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 12px;
 }
