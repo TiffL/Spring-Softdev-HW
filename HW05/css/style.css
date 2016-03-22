@@ -4,7 +4,7 @@ body{
 } 
 
 .container{
-    width: 1220px;
+    margin-right:55px;
     margin-left: 55px;
     padding: 5px;
     border: 1px solid black;
