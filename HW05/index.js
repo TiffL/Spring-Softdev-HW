@@ -27,6 +27,7 @@ var changeParty = function(){
 		else{
 		    return republicans;}})
 	.enter().append("div")
+        .style("width", "0px")
 	.transition()
 	.duration(2000)
 	.style("width", function(d) {return barLength(d[1])+ "px";})
