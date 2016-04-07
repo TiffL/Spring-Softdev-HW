@@ -10,9 +10,8 @@ def setDifference(SetU,SetA):
 def symmetricDiff(S1,S2):
     return setDifference(union(S1,S2),intersection(S1,S2))
 
-#workinprogress
 def cartesianProduct(S1,S2):
-    return [(S1[x],S2[x+1]) for x in range(len(S1))]
+    return [(x,y) for x in S1 for y in S2]
     
 print union(['a','b'],['a','c','d'])
 print intersection(['a','b'],['a','c','d'])
