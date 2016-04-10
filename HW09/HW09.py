@@ -1,5 +1,12 @@
 import time
 
+def nameArgs(f):
+    def inner(*arg):
+        print f.func_name + ": " + str(arg)
+        return f(*arg)
+    return inner
+
+@nameArgs
 def fib(num):
     if num == 0:
         return 0
@@ -8,20 +15,17 @@ def fib(num):
     else:
         return fib(num-1)+fib(num-2)
 
-def nameArgs(f):
-    def inner(*arg):
-        return f.func_name + ": " + str(f(*arg))
-    return inner
-
 def execution_time(f):
     def inner(*arg):
+        startTime = time.time()
         f(*arg)
-        return "execution time: " + str(time.time())
+        print "execution time: " + str(time.time()-startTime)
+        return f(*arg)
     return inner
 
 closure = nameArgs(fib)
-print closure(4)
+print closure(5)
 
 closure2 = execution_time(fib)
+print "\n"
 print closure2(4)
-print closure2(30)
